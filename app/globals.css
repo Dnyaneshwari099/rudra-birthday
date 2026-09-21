@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top, rgba(127, 29, 29, 0.2), transparent 30%),
+    linear-gradient(180deg, #09090b 0%, #12080b 45%, #09090b 100%);
+  color: #fff7ed;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: #fb7185;
+  color: #1c1917;
+}
+
+.glass {
+  background: rgba(255,255,255,0.055);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(14px);
+}
+
+.soft-shadow {
+  box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+}
+
+.fade-up {
+  animation: fadeUp .8s ease both;
+}
+
+.floaty {
+  animation: floaty 4s ease-in-out infinite;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
