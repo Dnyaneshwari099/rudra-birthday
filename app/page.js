@@ -4,10 +4,21 @@ import { useState } from "react";
 
 export default function Home() {
   const [opened, setOpened] = useState(false);
+  const [opening, setOpening] = useState(false);
+
+  const openLetter = () => {
+    if (opening) return;
+
+    setOpening(true);
+
+    setTimeout(() => {
+      setOpened(true);
+    }, 1800);
+  };
 
   if (!opened) {
     return (
-      <main className="letter-screen">
+      <main className={`letter-screen ${opening ? "opening-screen" : ""}`}>
         <div className="stars" />
 
         <div className="letter-intro">
@@ -22,13 +33,13 @@ export default function Home() {
           </p>
 
           <div
-            className="envelope-wrapper"
-            onClick={() => setOpened(true)}
+            className={`envelope-wrapper ${opening ? "opening" : ""}`}
+            onClick={openLetter}
             role="button"
             tabIndex={0}
             onKeyDown={(e) => {
               if (e.key === "Enter" || e.key === " ") {
-                setOpened(true);
+                openLetter();
               }
             }}
           >
@@ -49,7 +60,9 @@ export default function Home() {
             </div>
           </div>
 
-          <p className="tap-text">tap the letter to open it</p>
+          <p className="tap-text">
+            {opening ? "opening..." : "tap the letter to open it"}
+          </p>
         </div>
       </main>
     );
