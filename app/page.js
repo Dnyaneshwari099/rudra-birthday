@@ -161,7 +161,7 @@ export default function Home() {
       <section className="memory-scene scene-dark">
 
         <div className="memory-photo photo-one">
-          <img src="/1.jpg" alt="A memory of us in the mountains" />
+          <img src="/1.jpeg" alt="A memory of us in the mountains" />
         </div>
 
         <div className="memory-copy">
@@ -208,7 +208,7 @@ export default function Home() {
         </div>
 
         <div className="memory-photo photo-two">
-          <img src="/2.jpg" alt="A beautiful night memory of us" />
+          <img src="/2.jpeg" alt="A beautiful night memory of us" />
         </div>
 
         <div className="tiny-stars">✦ · ✧ · ✦</div>
@@ -224,7 +224,7 @@ export default function Home() {
 
         <div className="scrapbook-photo photo-three">
           <div className="tape" />
-          <img src="/3.jpg" alt="A close memory of us" />
+          <img src="/3.jpeg" alt="A close memory of us" />
         </div>
 
         <div className="memory-copy dark-copy">
@@ -273,7 +273,7 @@ export default function Home() {
         </div>
 
         <div className="memory-photo photo-four">
-          <img src="/4.jpg" alt="A sunny memory of us" />
+          <img src="/4.jpeg" alt="A sunny memory of us" />
         </div>
 
       </section>
@@ -288,7 +288,7 @@ export default function Home() {
         <div className="final-photo-glow" />
 
         <div className="memory-photo photo-five">
-          <img src="/5.jpg" alt="A special memory of us" />
+          <img src="/5.jpeg" alt="A special memory of us" />
         </div>
 
         <div className="memory-copy">
