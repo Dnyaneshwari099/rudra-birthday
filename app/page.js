@@ -24,14 +24,19 @@ export default function Home() {
   }, []);
 
   const openLetter = () => {
-    if (opening) return;
+  if (opening) return;
 
-    setOpening(true);
+  // Start the music from Rudra's click
+  if (audioRef.current) {
+    audioRef.current.play().catch(() => {});
+  }
 
-    setTimeout(() => {
-      setOpened(true);
-    }, 1800);
-  };
+  setOpening(true);
+
+  setTimeout(() => {
+    setOpened(true);
+  }, 1800);
+};
 
   if (!opened) {
     return (
