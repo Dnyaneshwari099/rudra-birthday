@@ -6,6 +6,23 @@ export default function Home() {
   const [opened, setOpened] = useState(false);
   const [opening, setOpening] = useState(false);
 
+  const audioRef = useRef(null);
+
+  useEffect(() => {
+    const audio = new Audio("/song.mp3");
+
+    audio.loop = true;
+    audio.volume = 0.45;
+    audio.preload = "auto";
+
+    audioRef.current = audio;
+
+    return () => {
+      audio.pause();
+      audioRef.current = null;
+    };
+  }, []);
+
   const openLetter = () => {
     if (opening) return;
 
