@@ -715,3 +715,868 @@ footer {
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
+/* =========================================
+   DREAMY FAIRYTALE BIRTHDAY EXPERIENCE
+========================================= */
+
+.birthday-site {
+  overflow-x: hidden;
+  background: #090609;
+}
+
+/* =========================================
+   BIRTHDAY HERO
+========================================= */
+
+.birthday-hero {
+  min-height: 100svh;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 40px 25px;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(116, 39, 67, 0.7),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(202, 150, 110, 0.12),
+      transparent 25%
+    ),
+    #090609;
+}
+
+.birthday-hero h1 {
+  position: relative;
+  z-index: 2;
+
+  font-size: clamp(58px, 10vw, 115px);
+  line-height: .9;
+  font-weight: 400;
+
+  letter-spacing: -.055em;
+
+  margin: 22px 0;
+}
+
+.birthday-hero h1 span {
+  color: #d88a9d;
+  font-style: italic;
+}
+
+.hero-subtitle {
+  position: relative;
+  z-index: 2;
+
+  color: #bca8af;
+
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: .04em;
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 35px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  color: #8f7b83;
+
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+
+  animation: gentleFloat 3s ease-in-out infinite;
+}
+
+.scroll-hint b {
+  font-size: 18px;
+  font-weight: 400;
+  color: #d88a9d;
+}
+
+@keyframes gentleFloat {
+  0%,100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(7px);
+  }
+}
+
+/* =========================================
+   FLOATING HEARTS
+========================================= */
+
+.floating-heart {
+  position: absolute;
+
+  color: rgba(216, 138, 157, .55);
+
+  font-size: 35px;
+
+  pointer-events: none;
+
+  animation: floatingHeart 6s ease-in-out infinite;
+}
+
+.heart-one {
+  left: 12%;
+  top: 25%;
+  animation-delay: 0s;
+}
+
+.heart-two {
+  right: 13%;
+  top: 32%;
+  font-size: 22px;
+  animation-delay: 1.5s;
+}
+
+.heart-three {
+  left: 20%;
+  bottom: 18%;
+  font-size: 18px;
+  animation-delay: 3s;
+}
+
+@keyframes floatingHeart {
+  0%,100% {
+    transform: translateY(0) rotate(-8deg);
+    opacity: .35;
+  }
+
+  50% {
+    transform: translateY(-25px) rotate(8deg);
+    opacity: .8;
+  }
+}
+
+.hero-stars,
+.hero-stars::before,
+.hero-stars::after {
+  position: absolute;
+
+  width: 2px;
+  height: 2px;
+
+  background: #fff;
+
+  border-radius: 50%;
+
+  content: "";
+}
+
+.hero-stars {
+  left: 10%;
+  top: 15%;
+
+  box-shadow:
+    10vw 12vh #fff,
+    22vw 35vh #fff,
+    35vw 18vh #fff,
+    47vw 8vh #fff,
+    62vw 28vh #fff,
+    76vw 12vh #fff,
+    87vw 38vh #fff,
+    15vw 65vh #fff,
+    32vw 78vh #fff,
+    52vw 70vh #fff,
+    72vw 65vh #fff,
+    90vw 80vh #fff;
+
+  opacity: .45;
+
+  animation: starTwinkle 4s ease-in-out infinite alternate;
+}
+
+@keyframes starTwinkle {
+  from {
+    opacity: .15;
+  }
+
+  to {
+    opacity: .65;
+  }
+}
+
+/* =========================================
+   FAIRYTALE INTRO
+========================================= */
+
+.fairytale-intro {
+  min-height: 85vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 100px 25px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #351624,
+      #0b070a 68%
+    );
+}
+
+.fairytale-intro h2 {
+  font-size: clamp(55px, 9vw, 105px);
+
+  line-height: .88;
+
+  font-weight: 400;
+
+  letter-spacing: -.055em;
+
+  margin: 25px 0 35px;
+}
+
+.fairytale-intro h2 span {
+  color: #d88a9d;
+  font-style: italic;
+}
+
+.fairytale-description {
+  font-family: Arial, sans-serif;
+
+  color: #aa969d;
+
+  line-height: 2;
+
+  font-size: 13px;
+}
+
+.sparkle-line {
+  display: flex;
+  gap: 22px;
+
+  margin-top: 45px;
+
+  color: #c9a66b;
+
+  font-size: 14px;
+}
+
+/* =========================================
+   MEMORY SCENES
+========================================= */
+
+.memory-scene {
+  min-height: 100svh;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 100px 8vw;
+
+  overflow: hidden;
+}
+
+.scene-dark {
+  background:
+    radial-gradient(
+      circle at 70% 40%,
+      #351625,
+      #090609 60%
+    );
+
+  color: #f7eee2;
+}
+
+.scene-night {
+  background:
+    radial-gradient(
+      circle at 30% 50%,
+      #182443,
+      #05070d 65%
+    );
+
+  color: #f7eee2;
+
+  flex-direction: row-reverse;
+}
+
+.scene-cream {
+  background:
+    radial-gradient(
+      circle at 70% 30%,
+      #f8e9dc,
+      #dfc7c0
+    );
+
+  color: #291a20;
+}
+
+.scene-sky {
+  background:
+    linear-gradient(
+      180deg,
+      #c5e1ef,
+      #e9d9d2
+    );
+
+  color: #291a20;
+}
+
+.scene-final-photo {
+  background:
+    radial-gradient(
+      circle at center,
+      #47202f,
+      #090609 68%
+    );
+
+  color: #f7eee2;
+
+  flex-direction: column;
+
+  gap: 50px;
+}
+
+/* =========================================
+   MEMORY PHOTOS
+========================================= */
+
+.memory-photo {
+  position: relative;
+
+  width: min(500px, 70vw);
+
+  overflow: hidden;
+
+  box-shadow:
+    0 35px 90px rgba(0,0,0,.55);
+
+  transform: rotate(-2deg);
+
+  z-index: 2;
+}
+
+.memory-photo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 1.2s ease;
+}
+
+.memory-photo:hover img {
+  transform: scale(1.04);
+}
+
+.photo-one {
+  aspect-ratio: 4 / 5;
+}
+
+.photo-two {
+  aspect-ratio: 9 / 13;
+
+  transform:
+    rotate(2deg)
+    translateY(10px);
+}
+
+.photo-four {
+  aspect-ratio: 4 / 5;
+
+  transform:
+    rotate(2deg);
+}
+
+/* =========================================
+   MEMORY TEXT
+========================================= */
+
+.memory-copy {
+  position: relative;
+
+  max-width: 500px;
+
+  padding: 45px;
+
+  z-index: 3;
+}
+
+.memory-copy .chapter {
+  display: block;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: .3em;
+
+  text-transform: uppercase;
+
+  color: #d88a9d;
+
+  margin-bottom: 22px;
+}
+
+.memory-copy h2 {
+  font-size: clamp(40px, 5vw, 67px);
+
+  line-height: .96;
+
+  font-weight: 400;
+
+  letter-spacing: -.045em;
+
+  margin: 0;
+}
+
+.memory-copy h2 em {
+  color: #d88a9d;
+  font-style: italic;
+}
+
+.memory-copy p {
+  margin-top: 25px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  color: #aa969d;
+}
+
+.dark-copy p {
+  color: #695a60;
+}
+
+.memory-heart {
+  position: absolute;
+
+  right: 10%;
+
+  bottom: 15%;
+
+  color: #d88a9d;
+
+  font-size: 80px;
+
+  opacity: .15;
+
+  transform: rotate(-15deg);
+}
+
+/* =========================================
+   SCRAPBOOK PHOTO
+========================================= */
+
+.scrapbook-photo {
+  position: relative;
+
+  width: min(440px, 72vw);
+
+  padding: 15px 15px 55px;
+
+  background: #fffaf2;
+
+  box-shadow:
+    0 30px 70px rgba(45,25,25,.25);
+
+  transform: rotate(-4deg);
+
+  z-index: 2;
+}
+
+.scrapbook-photo img {
+  width: 100%;
+
+  aspect-ratio: 4 / 5;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+.tape {
+  position: absolute;
+
+  width: 105px;
+  height: 30px;
+
+  top: -15px;
+  left: 50%;
+
+  transform:
+    translateX(-50%)
+    rotate(2deg);
+
+  background: rgba(211,179,151,.65);
+
+  z-index: 5;
+}
+
+.scene-cream .memory-copy {
+  padding-left: 7vw;
+}
+
+/* =========================================
+   FINAL PHOTO
+========================================= */
+
+.photo-five {
+  width: min(470px, 82vw);
+
+  aspect-ratio: 4 / 5;
+
+  transform: rotate(-1deg);
+
+  box-shadow:
+    0 0 80px rgba(216,138,157,.16),
+    0 35px 90px rgba(0,0,0,.6);
+}
+
+.final-photo-glow {
+  position: absolute;
+
+  width: 450px;
+  height: 450px;
+
+  border-radius: 50%;
+
+  background: rgba(216,138,157,.1);
+
+  filter: blur(80px);
+
+  pointer-events: none;
+}
+
+.big-heart {
+  position: absolute;
+
+  bottom: 8%;
+
+  color: #d88a9d;
+
+  font-size: 30px;
+
+  animation: heartPulse 2s ease-in-out infinite;
+}
+
+@keyframes heartPulse {
+  0%,100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.25);
+  }
+}
+
+/* =========================================
+   NIGHT STARS
+========================================= */
+
+.tiny-stars {
+  position: absolute;
+
+  top: 15%;
+  right: 12%;
+
+  color: #c9a66b;
+
+  letter-spacing: 15px;
+
+  opacity: .6;
+}
+
+/* =========================================
+   BIRTHDAY TRANSITION
+========================================= */
+
+.birthday-transition {
+  min-height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 100px 25px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #64223d,
+      #13090f 65%
+    );
+
+  color: #f7eee2;
+}
+
+.birthday-transition h2 {
+  font-size: clamp(70px, 11vw, 130px);
+
+  line-height: .85;
+
+  font-weight: 400;
+
+  letter-spacing: -.06em;
+
+  margin: 25px 0;
+}
+
+.birthday-transition h2 span {
+  color: #d88a9d;
+
+  font-style: italic;
+}
+
+.birthday-transition > p:not(.tiny-text) {
+  color: #b9a5ac;
+
+  font-family: Arial, sans-serif;
+
+  line-height: 1.8;
+
+  font-size: 13px;
+}
+
+.celebration-stars {
+  color: #c9a66b;
+
+  letter-spacing: 20px;
+
+  margin-bottom: 20px;
+}
+
+.celebration-heart {
+  margin-top: 55px;
+
+  color: #d88a9d;
+
+  font-size: 45px;
+
+  animation: heartPulse 2s ease-in-out infinite;
+}
+
+/* =========================================
+   RUDRA SECTION
+========================================= */
+
+.rudra-section {
+  min-height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 100px 25px;
+
+  background: #f7eee2;
+
+  color: #29191f;
+}
+
+.rudra-section h2 {
+  font-size: clamp(55px, 9vw, 100px);
+
+  line-height: .88;
+
+  font-weight: 400;
+
+  letter-spacing: -.055em;
+
+  margin: 25px 0 55px;
+}
+
+.rudra-section h2 span {
+  color: #a6536c;
+
+  font-style: italic;
+}
+
+.rudra-message {
+  width: min(600px, 100%);
+
+  font-family: Arial, sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  color: #76646a;
+}
+
+.heart-divider {
+  margin: 40px 0;
+
+  color: #a6536c;
+
+  letter-spacing: 12px;
+}
+
+.small-message {
+  font-size: 11px;
+
+  letter-spacing: .15em;
+
+  text-transform: uppercase;
+
+  color: #a6536c;
+}
+
+/* =========================================
+   FINAL LETTER
+========================================= */
+
+.final-letter {
+  min-height: 100vh;
+
+  padding: 130px 20px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #3a1826,
+      #090609 70%
+    );
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  background: #050405;
+
+  color: #756970;
+
+  padding: 60px 20px;
+
+  text-align: center;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 11px;
+
+  line-height: 2.2;
+}
+
+footer span {
+  color: #a6536c;
+}
+
+.footer-heart {
+  color: #d88a9d;
+
+  font-size: 25px;
+
+  margin-bottom: 15px;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+  .birthday-hero h1 {
+    font-size: 58px;
+  }
+
+  .fairytale-intro {
+    min-height: 75vh;
+  }
+
+  .fairytale-intro h2 {
+    font-size: 58px;
+  }
+
+  .memory-scene,
+  .scene-night {
+    min-height: auto;
+
+    flex-direction: column;
+
+    gap: 55px;
+
+    padding: 110px 22px;
+  }
+
+  .memory-copy {
+    padding: 10px 5px;
+
+    text-align: center;
+
+    order: 2;
+  }
+
+  .memory-photo,
+  .scrapbook-photo {
+    width: min(88vw, 390px);
+
+    order: 1;
+  }
+
+  .scene-cream .memory-copy {
+    padding-left: 5px;
+  }
+
+  .memory-copy h2 {
+    font-size: 43px;
+  }
+
+  .memory-heart {
+    right: 8%;
+    bottom: 5%;
+  }
+
+  .photo-one,
+  .photo-two,
+  .photo-four,
+  .photo-five {
+    transform: rotate(-1deg);
+  }
+
+  .tiny-stars {
+    position: static;
+  }
+
+  .birthday-transition h2 {
+    font-size: 70px;
+  }
+
+  .rudra-section h2 {
+    font-size: 58px;
+  }
+
+}
